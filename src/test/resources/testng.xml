@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OrangeHRMSuite">
+	<listeners>
+		<listener class-name="com.orangehrm.listeners.TestListener"></listener>
+	</listeners>
+	<test name="OrnageHRMTest_chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<!-- <class name="com.orangehrm.test.HomePageTest" />
+			<class name="com.orangehrm.test.LoginPageTest" /> 
+			<class name="com.orangehrm.test.DBVerificationTest" /> -->
+			<class name="com.orangehrm.test.AddingEmployeesTest" />
+		</classes>
+	</test>
+</suite>
