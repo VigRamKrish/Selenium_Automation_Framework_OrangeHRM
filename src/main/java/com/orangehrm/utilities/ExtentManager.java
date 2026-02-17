@@ -29,8 +29,9 @@ public class ExtentManager {
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {
 			String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-			reportPath = System.getProperty("user.dir") + "/src/test/resources/extentreport/ExtentReport_"
-					+ timeStamp + ".html";
+//			reportPath = System.getProperty("user.dir") + "/src/test/resources/extentreport/ExtentReport_"
+//					+ timeStamp + ".html";
+			reportPath = System.getProperty("user.dir") + "/src/test/resources/extentreport/ExtentReportIndex.html";
 			ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 			spark.config().setReportName("Automation Test Report");
 			spark.config().setDocumentTitle("OrangeHRM Report");
