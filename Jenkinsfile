@@ -5,62 +5,37 @@ pipeline {
         maven 'maven-3.9.11' 
     }
 
-    environment {
-        COMPOSE_PATH = "${WORKSPACE}/docker" // 🔁 Adjust if compose file is elsewhere
-        SELENIUM_GRID = "true"
-    }
-
     stages {
-        stage('Start Selenium Grid via Docker Compose') {
-            steps {
-                script {
-                    echo "Starting Selenium Grid with Docker Compose..."
-                    bat "docker compose -f ${COMPOSE_PATH}\\docker-compose.yml up -d"
-                    echo "Waiting for Selenium Grid to be ready..."
-                    sleep 30 // Add a wait if needed
-                }
-            }
-        }
 
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/VigRamKrish/Selenium_Automation_Framework_OrangeHRM.git'
+                git branch: 'master', 
+                url: 'https://github.com/VigRamKrish/Selenium_Automation_Framework_OrangeHRM.git'
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
-                bat 'mvn clean install -DseleniumGrid=true'
+                bat 'mvn clean test'
             }
         }
 
-        stage('Test') {
-            steps {
-                bat "mvn clean test -DseleniumGrid=true"
-            }
-        }
-
-        stage('Stop Selenium Grid') {
-            steps {
-                script {
-                    echo "Stopping Selenium Grid..."
-                    bat "docker compose -f ${COMPOSE_PATH}\\docker-compose.yml down"
-                }
-            }
-        }
-
-        stage('Reports') {
+        stage('Publish Reports') {
             steps {
                 publishHTML(target: [
-                    reportDir: 'src/test/resources/extentreport',  
-                    reportFiles: 'ExtentReportIndex.html',  
-                    reportName: 'Extent Report'
+                    reportDir: 'src/test/resources/extentreport',
+                    reportFiles: 'ExtentReportIndex.html',
+                    reportName: 'Extent Report',
+                    keepAll: true,
+                    alwaysLinkToLastBuild: true,
+                    allowMissing: true
                 ])
             }
         }
     }
 
     post {
+
         always {
             archiveArtifacts artifacts: '**/src/test/resources/extentreport/*.html', fingerprint: true
             junit 'target/surefire-reports/*.xml'
@@ -70,23 +45,26 @@ pipeline {
             emailext (
                 to: 'rvigneshram150@gmail.com',
                 subject: "Build Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                mimeType: 'text/html',
+                attachLog: true,
                 body: """
                 <html>
                 <body>
                 <p>Hello Team,</p>
                 <p>The latest Jenkins build has completed successfully.</p>
+
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> #${env.BUILD_NUMBER}</p>
                 <p><b>Build Status:</b> <span style="color: green;"><b>SUCCESS</b></span></p>
                 <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                <p><b>Extent Report:</b> <a href="http://localhost:8080/job/${env.JOB_NAME}/HTML_20Extent_20Report/">Click here</a></p>
-                <p>Best regards,</p>
-                <p><b>Automation Team</b></p>
+                <p><b>Extent Report:</b> 
+                <a href="${env.BUILD_URL}HTML_20Extent_20Report/">Click here</a></p>
+
+                <p>Best regards,<br>
+                <b>Automation Team</b></p>
                 </body>
                 </html>
-                """,
-                mimeType: 'text/html',
-                attachLog: true
+                """
             )
         }
 
@@ -94,24 +72,33 @@ pipeline {
             emailext (
                 to: 'rvigneshram150@gmail.com',
                 subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                mimeType: 'text/html',
+                attachLog: true,
                 body: """
                 <html>
                 <body>
                 <p>Hello Team,</p>
-                <p>The latest Jenkins build has <b style="color: red;">FAILED</b>.</p>
+                <p>The latest Jenkins build has 
+                <b style="color: red;">FAILED</b>.</p>
+
                 <p><b>Project Name:</b> ${env.JOB_NAME}</p>
                 <p><b>Build Number:</b> #${env.BUILD_NUMBER}</p>
-                <p><b>Build Status:</b> <span style="color: red;"><b>FAILED &#10060;</b></span></p>
-                <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                <p><b>Please check the logs and take necessary actions.</b></p>
-                <p><b>Extent Report (if available):</b> <a href="http://localhost:8080/job/${env.JOB_NAME}/HTML_20Extent_20Report/">Click here</a></p>
-                <p>Best regards,</p>
-                <p><b>Automation Team</b></p>
+                <p><b>Build Status:</b> 
+                <span style="color: red;"><b>FAILED ❌</b></span></p>
+
+                <p><b>Build URL:</b> 
+                <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+
+                <p><b>Extent Report (if available):</b> 
+                <a href="${env.BUILD_URL}HTML_20Extent_20Report/">Click here</a></p>
+
+                <p>Please check the logs and take necessary actions.</p>
+
+                <p>Best regards,<br>
+                <b>Automation Team</b></p>
                 </body>
                 </html>
-                """,
-                mimeType: 'text/html',
-                attachLog: true
+                """
             )
         }
     }
