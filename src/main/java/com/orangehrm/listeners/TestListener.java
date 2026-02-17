@@ -60,12 +60,12 @@ public class TestListener implements ITestListener {
 	    // Auto open report
 	    try {
 
-	        String reportPath = ExtentManager.getReportPath();
-	        File reportFile = new File(reportPath);
-
-	        if (reportFile.exists() && Desktop.isDesktopSupported()) {
-	            Desktop.getDesktop().browse(reportFile.toURI());
-	        }
+//	        String reportPath = ExtentManager.getReportPath();
+//	        File reportFile = new File(reportPath);
+//
+//	        if (reportFile.exists() && Desktop.isDesktopSupported()) {
+//	            Desktop.getDesktop().browse(reportFile.toURI());
+//	        }
 
 	    } catch (Exception e) {
 	        e.printStackTrace();
