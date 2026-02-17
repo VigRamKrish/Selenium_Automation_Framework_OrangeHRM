@@ -1,2 +1,4 @@
-com\orangehrm\test\LoginPageTest.class
 com\orangehrm\test\HomePageTest.class
+com\orangehrm\test\AddingEmployeesTest.class
+com\orangehrm\test\LoginPageTest.class
+com\orangehrm\test\DBVerificationTest.class

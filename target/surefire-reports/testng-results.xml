@@ -1,72 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-14T22:31:05 IST" name="Surefire suite" finished-at="2026-02-14T22:31:06 IST" duration-ms="963">
+  <suite started-at="2026-02-17T15:41:04 IST" name="OrangeHRMSuite" finished-at="2026-02-17T15:41:24 IST" duration-ms="20646">
     <groups>
     </groups>
-    <test started-at="2026-02-14T22:31:05 IST" name="Surefire test" finished-at="2026-02-14T22:31:06 IST" duration-ms="963">
+    <test started-at="2026-02-17T15:41:04 IST" name="OrnageHRMTest_chrome" finished-at="2026-02-17T15:41:24 IST" duration-ms="20646">
       <class name="com.orangehrm.test.HomePageTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.test.HomePageTest@611889f4]" started-at="2026-02-14T22:31:05 IST" name="loadConfig" finished-at="2026-02-14T22:31:05 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.orangehrm.test.HomePageTest@6892b3b6]" started-at="2026-02-17T15:41:04 IST" name="loadConfig" finished-at="2026-02-17T15:41:04 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.HomePageTest@611889f4]" started-at="2026-02-14T22:31:06 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1771088466602" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.HomePageTest@6892b3b6]" started-at="2026-02-17T15:41:05 IST" name="setup" finished-at="2026-02-17T15:41:08 IST" duration-ms="2928" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.HomePageTest@611889f4]" started-at="2026-02-14T22:31:06 IST" name="setupPages" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.HomePageTest@6892b3b6]" started-at="2026-02-17T15:41:08 IST" name="setupPages" finished-at="2026-02-17T15:41:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="verifyOrangeHRMLogo(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.HomePageTest@611889f4]" started-at="2026-02-14T22:31:06 IST" name="verifyOrangeHRMLogo" data-provider="validLoginData" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method signature="verifyOrangeHRMLogo(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.HomePageTest@6892b3b6]" started-at="2026-02-17T15:41:08 IST" name="verifyOrangeHRMLogo" data-provider="validLoginData" finished-at="2026-02-17T15:41:14 IST" duration-ms="5968" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,118 +39,68 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyOrangeHRMLogo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.HomePageTest@611889f4]" started-at="2026-02-14T22:31:06 IST" name="tearDown" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.HomePageTest@6892b3b6]" started-at="2026-02-17T15:41:14 IST" name="tearDown" finished-at="2026-02-17T15:41:14 IST" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.test.HomePageTest -->
-      <class name="com.orangehrm.test.LoginPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1771088466645" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+      <class name="com.orangehrm.test.AddingEmployeesTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.AddingEmployeesTest@74e28667]" started-at="2026-02-17T15:41:05 IST" name="setup" finished-at="2026-02-17T15:41:08 IST" duration-ms="2932" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="setupPages" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method signature="addingDeletingEmployees(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.AddingEmployeesTest@74e28667]" started-at="2026-02-17T15:41:08 IST" name="addingDeletingEmployees" data-provider="validLoginData" finished-at="2026-02-17T15:41:24 IST" duration-ms="16418" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vignesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Success@ram26]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingDeletingEmployees -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.AddingEmployeesTest@74e28667]" started-at="2026-02-17T15:41:08 IST" name="setupPages" finished-at="2026-02-17T15:41:08 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPages -->
-        <test-method signature="inValidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="inValidLoginTest" data-provider="inValidLoginData" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.AddingEmployeesTest@74e28667]" started-at="2026-02-17T15:41:24 IST" name="tearDown" finished-at="2026-02-17T15:41:24 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.orangehrm.test.AddingEmployeesTest -->
+      <class name="com.orangehrm.test.LoginPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:05 IST" name="setup" finished-at="2026-02-17T15:41:08 IST" duration-ms="2932" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:08 IST" name="setupPages" finished-at="2026-02-17T15:41:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="inValidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:08 IST" name="inValidLoginTest" data-provider="inValidLoginData" finished-at="2026-02-17T15:41:10 IST" duration-ms="2529" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -203,69 +113,29 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inValidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="tearDown" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:10 IST" name="tearDown" finished-at="2026-02-17T15:41:11 IST" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="setupPages" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupPages -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="setup" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:11 IST" name="setup" finished-at="2026-02-17T15:41:13 IST" duration-ms="2288" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyValidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="verifyValidLoginTest" data-provider="validLoginData" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:13 IST" name="setupPages" finished-at="2026-02-17T15:41:13 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="verifyValidLoginTest(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:13 IST" name="verifyValidLoginTest" data-provider="validLoginData" finished-at="2026-02-17T15:41:20 IST" duration-ms="7032" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -278,61 +148,51 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.LoginPageTest@342c38f8]" started-at="2026-02-14T22:31:06 IST" name="tearDown" finished-at="2026-02-14T22:31:06 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.LoginPageTest@74d1dc36]" started-at="2026-02-17T15:41:20 IST" name="tearDown" finished-at="2026-02-17T15:41:20 IST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.orangehrm.test.LoginPageTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+      <class name="com.orangehrm.test.DBVerificationTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.orangehrm.test.DBVerificationTest@7161d8d1]" started-at="2026-02-17T15:41:05 IST" name="setup" finished-at="2026-02-17T15:41:08 IST" duration-ms="2910" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setupPages()[pri:0, instance:com.orangehrm.test.DBVerificationTest@7161d8d1]" started-at="2026-02-17T15:41:08 IST" name="setupPages" finished-at="2026-02-17T15:41:08 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupPages -->
+        <test-method signature="verifyEmployeeNameVerificationFromDB(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.DBVerificationTest@7161d8d1]" started-at="2026-02-17T15:41:08 IST" name="verifyEmployeeNameVerificationFromDB" data-provider="emplVerification" finished-at="2026-02-17T15:41:17 IST" duration-ms="9151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vignesh]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmployeeNameVerificationFromDB -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangehrm.test.DBVerificationTest@7161d8d1]" started-at="2026-02-17T15:41:17 IST" name="tearDown" finished-at="2026-02-17T15:41:17 IST" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.orangehrm.test.DBVerificationTest -->
+    </test> <!-- OrnageHRMTest_chrome -->
+  </suite> <!-- OrangeHRMSuite -->
 </testng-results>
